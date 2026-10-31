@@ -111,6 +111,7 @@
       </div>
     </div>
     <floatingAgent v-model="agentVisible" :inert="workspaceStore.projectLoadingVisible" @resize="agentWidth = $event" />
+    <keyStatusPanel v-if="activePanel === 'canvas'" class="keyStatusPanel" />
     <settings v-model="settingsVisible" />
     <el-dialog v-model="contactVisible" :title="contactInfo.title" width="min(360px, calc(100vw - 32px))" alignCenter appendToBody>
       <div class="contactContent">
@@ -146,6 +147,7 @@ import canvasPanel from "./panels/canvas/canvasHost.vue";
 import type { DocumentNodeOptions } from "./panels/canvas/canvasFiles";
 import workspaceMenu from "./components/workspaceMenu.vue";
 import floatingAgent from "./components/floatingAgent.vue";
+import keyStatusPanel from "./components/keyStatusPanel.vue";
 
 const documentPanel = defineAsyncComponent(() => import("./panels/document/index.vue"));
 
@@ -401,6 +403,13 @@ function saveDocumentNode(directory: string, canvasPath: string, nodeId: string,
     position: absolute;
     top: 15px;
     left: 15px;
+    z-index: 5;
+  }
+
+  .keyStatusPanel {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
     z-index: 5;
   }
 

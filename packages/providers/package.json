@@ -12,6 +12,7 @@
     "./language/tfRouter": "./src/language/tfRouter.ts",
     "./language/deepSeek": "./src/language/deepSeek.ts",
     "./media/tfRouter": "./src/media/tfRouter.ts",
+    "./media/agnes": "./src/media/agnes.ts",
     "./media/apiMart": "./src/media/apiMart.ts",
     "./media/metaso": "./src/media/metaso.ts",
     "./media/compshare": "./src/media/compshare.ts"

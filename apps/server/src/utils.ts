@@ -7,6 +7,8 @@ import * as mediaGeneration from "@/utils/media/generation";
 import * as mediaTasks from "@/utils/media/tasks";
 import * as mediaProvider from "@/utils/media/provider";
 import * as mediaBilling from "@/utils/media/billing";
+import * as mediaKeyPool from "@/utils/media/keyPool";
+import * as mediaPublicAssets from "@/utils/media/publicAssets";
 import * as ffmpeg from "@/utils/ffmpeg";
 import * as pluginInstall from "@/utils/plugins/install";
 import conf, { cleanNodeMenuSettings, removeLegacySettings } from "@/utils/conf";
@@ -43,6 +45,8 @@ export default {
   mediaTasks,
   mediaProvider,
   mediaBilling,
+  mediaKeyPool,
+  mediaPublicAssets,
   ffmpeg,
   pluginInstall,
   conf,
